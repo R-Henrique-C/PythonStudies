@@ -1,6 +1,7 @@
 # # Important: The code bellow is a great mess bc those are four different exercises agglutinated in a single file
 # # (that's the reason why is everything as a commentary). Use the numbers of each exercice to navegate the code.
-# # btw, a great part of the file is written in portuguese, but variables and functions are in english
+# # btw, a great part of the file is written in portuguese, but variables and functions are in english.
+# # To finish, excuse me for my poor english. ;)
 
 # # Importante: O código abaixo é uma grande bagunça por conta de ser quatro exercícios aglutinados em um único arquivo
 # # (é por isso que tudo está como um comentário). Use os números de cada exercício para navegar o código.
@@ -9,7 +10,7 @@
 import matplotlib.pyplot as plt # Exercicio 4
 import numpy as np
 
-# # --------------------------------- // ---------------------------------
+# --------------------------------- // ---------------------------------
 # # Exercise/Exercício 1:
 # pirSize = int(input("Digite o tamanho da pirâmide: "))
 
