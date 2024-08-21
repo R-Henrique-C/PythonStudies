@@ -1,0 +1,122 @@
+# # Important: The code bellow is a great mess bc those are four different exercises agglutinated in a single file
+# # (that's the reason why is everything as a commentary). Use the numbers of each exercice to navegate the code.
+# # btw, a great part of the file is written in portuguese, but variables and functions are in english
+
+# # Importante: O código abaixo é uma grande bagunça por conta de ser quatro exercícios aglutinados em um único arquivo
+# # (é por isso que tudo está como um comentário). Use os números de cada exercício para navegar o código.
+
+
+import matplotlib.pyplot as plt # Exercicio 4
+import numpy as np
+
+# # --------------------------------- // ---------------------------------
+# # Exercise/Exercício 1:
+# pirSize = int(input("Digite o tamanho da pirâmide: "))
+
+# def getPiramid (x):
+#   # Condiconais de exclusão
+#   if type(x) != int:
+#     return 'O parâmetro deve ser um número inteiro.'
+#   if x == 0:
+#     return 'Sua pirâmide está vazia.'
+#   if x < 0:
+#     return 'O parâmetro deve ser um número positivo.'
+  
+#   lenPiramid = print(f'Esta é a sua pirâmide de {x} linhas:')
+#   for i in range(1, x + 1): # O valor i começa no nº 1 e vai ate x + 1. Ex: 4 -> i = 1, 2, 3, 4
+#      piramid = i * '*' # i é multiplicado por '*'. como "end = '\n'" a linha é quebrada
+#      print(piramid)
+
+# getPiramid(pirSize)
+
+# # --------------------------------- // ---------------------------------
+# # Exercise/Exercício 2:
+# encrypt = { # Chave: nº da vogal * 2 + 14. Ex: a = 1 * 2 + 14 = 16
+#     'a': '16',
+#     'e': '24',
+#     'i': '32',
+#     'o': '44',
+#     'u': '56'
+# }
+
+# # Função que encripta os valores de ums str
+# def encryptStr (x):
+#   if type(x) != str: # Verifica se o parâmetro é uma str
+#     return 'O parâmetro deve ser um texto'
+
+#   text = x.lower() # Transforma o texto do parâmetro em minúsculo
+
+#   for i in encrypt:
+#     text = text.replace(i, encrypt[i]) # Substitui a letra pelo valor da chave
+#   return text
+
+# def moreNames (x):
+#   if type(x) != str:
+#     return 'O parâmetro deve ser um texto'
+
+#   name = x.title() # Capitaliza as palavras do parâmetro
+#   lenName = len(name) # Retorna o tamanho da palavra do parâmetro
+
+#   if lenName < 3:
+#     return 'O texto digitado não é válido, tente novamente'
+#     # Esta linha quebra o código e retorna a mensagem como a causadora do erro:
+#     # 'raise Exception('O nome não pode ter menos de 3 caracteres')'
+
+#   inveName = name [::-1] # Inverte o as palavras do parâmetro
+#   cryptName = encryptStr(name) # Encripta o texto do parâmetro
+
+#   # Valor que a função retorna
+#   showName = (f'Olá, {name}! Olá, {inveName}! Olá, {cryptName}!')
+#   return showName
+
+#   #   return 'O nome não pode ter menos de 3 caracteres' if lenName < 3
+#   # 'O nome não pode ser vazio' if lenName == 0 else (f'Olá, {name}! Olá, {name[::-1]}!')
+
+# iptName = input('Digite seu nome: ')
+# moreNames(iptName)
+
+# # --------------------------------- // ---------------------------------
+# # Exercise/Exercício 3 & 4:
+# entrada = ["1", "2", "3", "4", "5"]
+
+# def calcStraightLine (x):
+#   results = [] # Array que armazenará os resultados
+#   for i in range(len(x)):
+#     value = (4 * int(x[i])) + 9 # Formula da reta
+#     results.append(value) # Insere os valores dentro da array dos resultados
+
+#   return results
+
+# # ---------------------------------
+
+# values = calcStraightLine(entrada) # Armazena os valores da func 'calcStraightLine'
+# valuesToPlot = [] # Cria uma lista vazia
+
+# for i in range(len(entrada)):
+#   valuesToPlot.append([{'x': entrada[i], 'y': values[i]}])
+
+# data = [ # Dicionário de valores dos eixos X e Y
+#     {"x": 1, "y": 2},
+#     {"x": 2, "y": 3},
+#     {"x": 3, "y": 4},
+# ]
+
+# def plot(data): # Função que "plota" um gráfico usando os ponteiros de um dicionário como parâmetro
+#   # Divide o dicionário em duas listas, X e Y
+#   x = []
+#   y = []
+#     # Os valores do exercício 3 são um dicionários armazenados em uma array.
+#     # O que traz a necessidade de percorrer a array e suas subarrays
+#   for i in data: 
+#     for j in i:
+#       x.append(j['x'])
+#       y.append(j['y'])
+#   # "b-" define como sera a linha do gráfico
+#   # b = blue; - = solid line (contínuo)
+#   plt.plot(x, y, "b-")
+#   # "ro" define os marcadores do gráfico
+#   # r = red; o = dot
+#   plt.plot(x, y, "ro")
+#   plt.show() # Mostra o gráfico
+
+# plot(valuesToPlot)
